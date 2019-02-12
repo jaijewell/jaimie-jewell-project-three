@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="script" href="script.js">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Magic Eight Ball</title>
+</head>
+<body>
+    <header>
+        <h2>put something in the header</h2>
+    </header>
+    <main>
+        <section>
+            <h1> Magical 8 Ball</h1>
+            <h2>Ask the 8 ball a yes / no / maybe question</h2>
+        </section>
+        <section>
+            <form action="">
+                <div class="message">
+                    <label for="user-input" class="visually-hidden">Ask your question</label>
+                    <textarea id="user-input" name="question" placeholder="Question" cols="100" rows="2" maxlength="1000" class="visually-hidden"></textarea>
+                </div>
+                <label for="submit-question" class="visuallyHidden">Submit comment</label>
+                <input type="submit" id="submit-question" value="Discover your Fate">
+            </form>
+        </section>
+        <section>
+        <div class="user-question"></div>
+        <div class="fortune"></div>
+    </section>
+    </main>
+    <footer>
+        <h2>Copyright &copy 2019 Jaimie Jewell</h2>
+    </footer>
+</body>
+</html>
+<!-- 
+
+MVP - 
+create an input, user types question that requires yes / no / maybe answer.
+array of standard answers to questions
+generate random answer to user's question
+print user's question and random answer to screen
+reset button
+
+
+stretch goals
+- create additional arrays
+- allow user to select which array the advice comes from 
+- e.g. humourous
+- advice from specific celebrity 
+- advice from grandparent?
+- advice in lyrics?
+
+styling 
+    - create the shape of an 8 ball to look like it would with the answer in the center
+    - animate 8ball so it appears to shake
+ -->
+
