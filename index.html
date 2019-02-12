@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="script" href="script.js">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Magic Eight Ball</title>
 </head>
 <body>
@@ -18,23 +17,29 @@
             <h2>Ask the 8 ball a yes / no / maybe question</h2>
         </section>
         <section>
-            <form action="">
-                <div class="message">
-                    <label for="user-input" class="visually-hidden">Ask your question</label>
-                    <textarea id="user-input" name="question" placeholder="Question" cols="100" rows="2" maxlength="1000" class="visually-hidden"></textarea>
-                </div>
-                <label for="submit-question" class="visuallyHidden">Submit comment</label>
-                <input type="submit" id="submit-question" value="Discover your Fate">
+            <form class="form-submit" action="">
+                <label for="user-input" class="visually-hidden">Ask your question</label>
+                <input type="text" class="user-input" id="user-input" 
+                name="question" placeholder="Ask your question" minlength= 5>
+
+                <label for="submit" class="visually-hidden">Submit Question</label>
+                <input type="submit" id="submit" value="Discover your Fate">
+            </form>
+            <form class="form-reset" action="">
+                <input type="submit" id="re-submit" class="re-submit" value="clear & ask again">
             </form>
         </section>
-        <section>
-        <div class="user-question"></div>
-        <div class="fortune"></div>
-    </section>
+        <section class="user-question">
+        </section>
+        <section class="fortune"></h2>
+        </section>
     </main>
     <footer>
         <h2>Copyright &copy 2019 Jaimie Jewell</h2>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 <!-- 
