@@ -61,22 +61,22 @@ $(function () {
         // let userInput = $('input[name=question]').val();
 
     //    //check to determine if user left input box blank
-        if ($('.form-submit .user-input input[type=text]').val() !== ''){
-            const question = $('.form-submit .user-input input[type=text]').val();
-            
-            console.log(question);
+        if ($('.form-submit input[type=text]').val() !== ''){
+            const question = $('input[type=text]').val();
+            //print users input to screen
+            $('.user-question').html(`<h2 class="print-question">You typed ${question} ?</h2>`);
         };
     //     }  else {
     //         alert('enter a question');
     //     }
 
-        // $('div.user-question').html(`<h2 class="user-question">${userQuestion}</h2>`);
+       
 
         //randomize answers array
         const randoNum = Math.floor(Math.random() * answers.length);
         //print answers array value to DOM
-        $('.fortune').html(`<h2 class="answer">${answers[randoNum]}</h2>`);
-    }
+        $('.fortune').html(`<h2 class="answer">Magic 8 ball says: ${answers[randoNum]}</h2>`);
+    });
 
     //clear fortune, and clear users input so it's clean and they can enter something else into the input field. 
     const clearInput = function () {
