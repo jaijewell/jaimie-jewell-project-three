@@ -1,7 +1,28 @@
+form {
+     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 20vh;
+    border: 2px solid blue;
+}
+
 input[type=text] {
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 50px;
+    padding: 15px;
+    border: 2 px solid turquoise;
 }
+
+input[type=submit] {
+    height: 50px;
+    width: 50%;
+    border: 2px solid gold;
+    
+
+    &::focus {
+        border:2px solid tomato;
+    }
+}
+
