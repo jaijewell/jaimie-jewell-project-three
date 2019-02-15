@@ -1,0 +1,10 @@
+h1 {
+    font-family: $primary-font;
+    color: $primary-accent;
+    @include fontSize(150);
+}
+
+h2 {
+    color: $secondary-colour;
+}
+

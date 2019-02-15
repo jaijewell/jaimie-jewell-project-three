@@ -1,4 +1,17 @@
-header h1 {
-    text-align: center;
-    border: 2px solid salmon;
-}
+header {
+    display: flex;
+    // justify-content: flex-end;
+    align-items: flex-end;
+
+    h1 {
+        
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        border: 2px solid salmon;
+    } 
+
+    h2{
+        height: inherit;
+    }
+} 

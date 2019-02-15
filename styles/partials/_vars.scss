@@ -1,12 +1,12 @@
-$primaryColour: #f0efed;
-$secondaryColour: white;
-$primaryAccent: #f8e71c;
-$secondaryAccent: #0e902d;
+$primary-colour: linear-gradient(315deg, #485461 0%, #28313b 74%);
+$secondary-colour:white; 
+$primary-accent: #ab20fd; //neon purple
+$secondary-accent: #ff0083;
 $tertiaryAccent: #074115;
 $black: #2c2c2c;
 $transitionDetail: .2s ease-in-out;
-$primaryFont: 'Josefin Sans', sans-serif;
-$secondaryFont: 'Roboto', sans-serif;
+$primary-font: 'Lobster Two', cursive;
+$secondary-font: 'Lato', sans-serif;
 // $primaryLineHeight: 32px;
 // $headingLineHeight: 92px;
 // $primaryLetterSpacing: 1.3px;
@@ -14,3 +14,16 @@ $secondaryFont: 'Roboto', sans-serif;
 // $primaryLineHeight:  32px;
 // $boxShadowRight: 20px 20px $primaryAccent;
 // $boxShadowLeft: -20px 20px $primaryAccent;
+
+
+
+    // font-family: 'Bungee Inline', cursive;
+
+    // font-family: 'Lato', sans-serif;
+
+
+
+    // font-family: 'Lato', sans-serif;
+
+    // font-family: 'Lobster Two', cursive;
+
