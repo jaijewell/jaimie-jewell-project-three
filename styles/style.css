@@ -171,7 +171,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   align-items: center; }
 
 header h1 {
-  text-align: center; }
+  text-align: center;
+  border: 2px solid salmon; }
 
 form {
   display: -webkit-box;
@@ -202,3 +203,6 @@ input[type=submit] {
   border: 2px solid gold; }
   input[type=submit]::focus {
     border: 2px solid tomato; }
+
+.instructions {
+  border: 2px solid peachpuff; }
