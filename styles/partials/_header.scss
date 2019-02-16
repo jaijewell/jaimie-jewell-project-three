@@ -1,17 +1,48 @@
 header {
+    height: 100vh;
     display: flex;
-    // justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between ;
+    // align-items: center;
 
-    h1 {
-        
-        height: 100vh;
+   
+    .title {
+        flex: 1, 150px;
+        width: 100%;
+        padding-top: 10%;
         margin: 0;
-        text-align: center;
-        border: 2px solid salmon;
+        // text-align: center;
+        // border: 2px solid salmon;
     } 
 
-    h2{
-        height: inherit;
+    span {
+        display: block;
+    }
+
+    .instructions {
+        width: 60%;
+        margin: 0;
+        // padding-left: 15%;
+        padding-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        h2 {
+            // border: 2px solid yellow;
+            // width: 80%;
+            padding-bottom: 10%;
+
+        }
+
+        a {
+            border: 2px solid white;
+            transition: background $transition-detail;
+            
+            &:hover {
+                background-color: $secondary-colour;
+                color: $primary-accent;
+            }
+        }
     }
 } 

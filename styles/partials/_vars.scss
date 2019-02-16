@@ -2,18 +2,19 @@ $primary-colour: linear-gradient(315deg, #485461 0%, #28313b 74%);
 $secondary-colour:white; 
 $primary-accent: #ab20fd; //neon purple
 $secondary-accent: #ff0083;
-$tertiaryAccent: #074115;
-$black: #2c2c2c;
-$transitionDetail: .2s ease-in-out;
+$tertiary-accent: #074115;
+// $black: #2c2c2c;
+
 $primary-font: 'Lobster Two', cursive;
 $secondary-font: 'Lato', sans-serif;
-// $primaryLineHeight: 32px;
+$primary-line-height: 1.6rem;
+
+
+
+$transition-detail: .7s ease-in-out;
 // $headingLineHeight: 92px;
 // $primaryLetterSpacing: 1.3px;
 // $secondaryLetterSpacing: 1px;
-// $primaryLineHeight:  32px;
-// $boxShadowRight: 20px 20px $primaryAccent;
-// $boxShadowLeft: -20px 20px $primaryAccent;
 
 
 
@@ -26,4 +27,7 @@ $secondary-font: 'Lato', sans-serif;
     // font-family: 'Lato', sans-serif;
 
     // font-family: 'Lobster Two', cursive;
+
+
+
 

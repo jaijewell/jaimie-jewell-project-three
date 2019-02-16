@@ -1,7 +1,13 @@
-@mixin fontSize($sizeValue){
-  font-size: $sizeValue * 1px;
-  font-size: ($sizeValue/20) * 1rem;
+@mixin font-size($size-value){
+  font-size: $size-value * 1px;
+  font-size: ($size-value/20) * 1rem;
 }
+
+@mixin line-height($height-value){
+  line-height: $height-value * 1.6;
+  line-height: ($height-value/20) *1.6rem;
+}
+
 
 
 //media query mixins
