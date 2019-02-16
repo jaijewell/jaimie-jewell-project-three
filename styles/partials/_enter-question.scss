@@ -1,0 +1,37 @@
+.enter-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    .question-instructions {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+
+       p {
+           padding-left: 33.5%;
+       }
+    }
+}
+
+
+.decorative-question {
+    height: 30%;
+    width: 25%;
+    border: 2px solid $primary-accent;
+    // border-top-left-radius:0;
+    // border-top-right-radius: 0;
+    // border-bottom-left-radius: 0;
+    border-bottom-right-radius: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    i {
+        height: 100%;
+        width: 100%;
+    }
+}

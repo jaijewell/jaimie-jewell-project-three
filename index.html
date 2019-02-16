@@ -4,63 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Lobster+Two:400,700i" rel="stylesheet">
+
+
+    <!-- animations -->
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- style sheet -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Magic Eight Ball</title>
 </head>
 <body class ="wrapper">
     <header>
-        <div class="title">
-            <h1>Shake <span>the Eight</span></h1>
+        <div class="title" id="heading">
+            <h1>Shake <span>the Eight!</span></h1>
         </div>
         <div class="instructions">
-            <h2>Instructions: Type in a question that requries an answer of yes, no, or maybe, and the Magic 8 Ball will reveal your
-            fate.</h2>
-            <a href="#name">Shake the Eight</a>
+            <h2>Shake the eight and get your burning questions answered. This is 100% accurate</h2>
+            <a id="name-button">Shake the Eight</a>
         </div>
     </header>
     <main>
-        <section class="name-form-container id="name">
-            <form class="name-form-container" action="">
+        <section class="enter-name form-container" id="name">
+            <h3>What should I call you?</h3>
+            <form class="name-form-container" action="">   
                 <label for="user-name" class="visually-hidden">Please enter your name</label>
                 <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
                 <a href="#user-input">Submit Name</a>
                 <!-- <input type="submit" id="submit-name" value="Submit Name"> -->
             </form>
-            <div class="decorative">
-                <!-- put some svgs of 8 ball questions to ask -->
+            <div class="animated decorative-name">
+                <i class="fas fa-question floating icon1"></i>
+                <i class="fas fa-question floating icon2"></i>
+                <i class="fas fa-question floating icon3"></i>
+                <i class="fas fa-question floating icon4"></i>
+                <i class="fas fa-question floating icon5"></i>
+                <i class="fas fa-question floating icon6"></i>
+                <i class="fas fa-question floating icon7"></i>
+                <i class="fas fa-question floating icon8"></i>
+                <i class="fas fa-question floating icon9"></i>
+                <i class="fas fa-question floating icon10"></i>
+                <i class="fas fa-question floating icon11"></i>
+                <i class="fas fa-question floating icon12"></i>
+                <i class="fas fa-question floating icon13"></i>
+                <i class="fas fa-question floating icon14"></i>
+                <i class="fas fa-question floating icon15"></i>
+                <i class="fas fa-question floating icon16"></i>
+                <i class="fas fa-question floating icon17"></i>
+                <i class="fas fa-question floating icon18"></i>
+                <i class="fas fa-question floating icon19"></i>
+                <i class="fas fa-question floating icon20"></i>
             </div>
         </section>
-        <section>
-            <div class="user-question-form"></div>
+        <section class="enter-question form-container" id="question">
+            <div class="animated decorative-question">
+                <p class="ans-one">yes</p>
+                <p class="ans-two">keep dreaming</p>
+                <p class="ans-three">Ask again later</p>
+                <p class="ans-four">Better not tell you now</p>
+                <p class="ans-five">definitely</p>
+                <p class="ans-six">doubtful</p>
+                <p class="ans-seven">Most likely</p>
+                <p class="ans-eight">probs</p>
+                <p class="ans-nine">yolo</p>
+                <p class="ans-ten">try again</p>
+                <p class="ans-eleven">outlook good</p>
+                <p class="ans-twelve">It is certain</p>
+                <p class="ans-thirteen">Don’t count on it</p>
+                <p class="ans-fourteen">Cannot predict now</p>
+                <p class="ans-fifteen">Outlook not so good</p>
+                <p class="ans-sixteen">nope</p>
+                <p class="ans-seventeen">not a chance</p>
+          
+            </div>
+            <h3>Gimme your question</h3>
+            <div class="question-instructions">
+                <p>Is this your first time? Nice. Ask questions that can be answered with yes, no or maybe.</p>
                 <form class="form-submit" action="">
                     <label for="user-input" class="visually-hidden">Ask your question</label>
                     <input type="text" class="user-input" id="user-input" 
                     name="question" placeholder="Ask your question" minlength= 5>
                     <label for="submit" class="visually-hidden">Submit Question</label>
-                    <input type="submit" id="submit" value="Discover your Fate">
+                    <input type="submit" id="submit" value="Shake the Eight">
                 </form>
             </div>
         </section> 
-        <section class="image-container">
-            <!-- <img src="assets/magic-eight-ball.jpg" alt="magic 8 ball cue"> -->
+        <!-- <section class="image-container">
             <img src="assets/noun-eight-ball.svg" alt="magic 8 ball">
-        </section>
-        <section>
+        </section> -->
+        <section id="result">
             <div class="user-question"></div>
             <div class="fortune"></div>
-            <div class="reset-form">
+        </section>
+        <section class="reset" id="reset-button">
+            <div>
                 <form class="form-reset" action="">
                     <label for="re-submit" class="visually-hidden">Submit Question</label>
-                    <input type="submit" id="re-submit" class="re-submit" value="Ask another question">
-                </form>
+                    <input type="submit" id="re-submit" class="re-submit" value="Again">
+              </form>
             </div>
         </section>
-        
-            
     </main>
     <footer>
-        <h2>Copyright &copy 2019 Jaimie Jewell</h2>
+        <h4>Copyright &copy 2019 Jaimie Jewell</h4>
     </footer>
 
    <!-- jquery CDN -->

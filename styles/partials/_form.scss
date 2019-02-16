@@ -1,28 +1,27 @@
-form {
+.form-container {
+    border: 2px dotted green;
+}
+
+form:not(.form-reset) {
+    // height: 18vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     padding: 10px;
-    height: 20vh;
-    border: 2px solid blue;
 }
 
 input[type=text] {
-    width: 80%;
+    width: 400px;
     height: 50px;
     padding: 15px;
-    border: 2 px solid turquoise;
 }
 
 input[type=submit] {
-    height: 50px;
+    text-transform: uppercase;
+    height: 70px;
     width: 50%;
-    border: 2px solid gold;
-    
-
-    &::focus {
-        border:2px solid tomato;
-    }
+    margin-top: 10%;
+    color: $secondary-colour;
+    background-color: $primary-accent;
 }
 

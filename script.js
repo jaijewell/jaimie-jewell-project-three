@@ -34,6 +34,13 @@ myApp.answers = [
 
 //event listener for submit button
     myApp.handleSubmit = function(){
+        
+        $('#name-button').on('click', function () {
+            $('html, body').animate({
+            scrollTop: $('#name').offset().top
+        }, 1000);
+        }); //smooth scroll from header a tag click to name entry, found on stack overflow
+        
         $('.form-submit').on('submit', function (e) {
             e.preventDefault();
 
@@ -69,6 +76,7 @@ myApp.answers = [
             myApp.userInputValue(); //calling userInputValue Function
             myApp.printToPage(); // calling printToPage Function
         });
+
     }
 
 //clear fortune, and clear users printed input so they can enter something else into the input field. 
@@ -76,6 +84,11 @@ myApp.answers = [
         $('.re-submit').on('click', function () {
             $('.user-input').val('');
             $('.fortune').empty('')
+            
+            $('html, body').animate({
+                scrollTop: $('#question').offset().top
+            }, 1000);
+        
         });
     }; 
     
@@ -84,6 +97,18 @@ myApp.answers = [
         myApp.handleSubmit(); //calling handleSubmit Function
         myApp.clearInput(); // calling clearInput Function
     };
+
+    //animation
+    $(window).scroll(function() {
+        $('.animated').each(function () {
+            let imagePos = $(this).offset().top;
+
+            let topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 400) {
+                $(this).addClass("slideUp");
+            }
+        });
+    });
 
 $(function(){
     myApp.init();

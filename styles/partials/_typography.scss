@@ -3,16 +3,21 @@ h1 {
     color: $primary-accent;
     @include font-size(200);
     @include line-height(200);
-    
 }
 
 h2 {
     color: $secondary-colour;
     @include font-size(35);
     @include line-height(35);
-    
 }
 
- h1, h2 {
+ h1, h2, h3, h4 {
     margin: 0;
+}
+
+h3 {
+    color: $secondary-colour;
+    font-family: $secondary-font;
+    @include font-size(80);
+    @include line-height(80);
 }
