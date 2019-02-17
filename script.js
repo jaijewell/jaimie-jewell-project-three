@@ -1,16 +1,11 @@
-
-//step 1: create global variable for user's input to go later, when we will print to the screen 
-//step 3a: if user enters nothing - print "you must neter a question"
-//step 3b: on click, print user input
-//step 4: on click, print random answer
-const myApp = {};
-myApp.$userName = '';
-myApp.$userQuestion = '';
+const myApp = {}; //attempt to apply name spacing
+myApp.$userName = ''; //empty space for $userName re: printNameToPage
+myApp.$userQuestion = ''; //empty space for $userQuestion re: printToPage
 myApp.$name = $('.intro'); //defining variable for html class
 myApp.$fortune = $('.fortune'); //defining variable for html class
 myApp.$question = $('.user-question'); //defining variable for html class
 
-//step 2: create an array of standard answers
+// array of possible answers .form-submit on submit
 myApp.answers = [
     "As I see it, yes",
     "Ask again later",
@@ -34,7 +29,7 @@ myApp.answers = [
     "You may rely on it"
 ];
 
-//event listener for submit button
+//event listener for submit buttons
     myApp.handleSubmit = function(){
         
         $('#name-button').on('click', function () {
@@ -63,10 +58,13 @@ myApp.answers = [
                 if ($('.name-form input[type=text]').val() !== '') {
                     myApp.$nameInput = $('.name-form input[type=text]').val();
                     myApp.$userName = myApp.$nameInput
-                }; 
-                console.log(myApp.$userName);
+                } else { //error handling blank myApp.$nameInput
+                    myApp.$nameInput = "human"; 
+                    myApp.$userName = myApp.$nameInput;
+                }
             } //userNameInput function ends here
 
+            
             myApp.printNametoPage = function () {
                 //print to page, the user's question & Magic 8 Ball Fortune
                 myApp.$name.html(`<p class="print-name">Is this your first time <span>${myApp.$userName} </span>? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);

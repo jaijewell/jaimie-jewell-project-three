@@ -2,33 +2,34 @@ header {
     height: 100vh;
     display: flex;
     justify-content: space-between ;
-    // align-items: center;
 
-   
     .title {
         flex: 1, 150px;
         width: 100%;
         padding-top: 10%;
         margin: 0;
-        // text-align: center;
         // border: 2px solid salmon;
     } 
 
     .instructions {
         width: 60%;
         margin: 0;
-        // padding-left: 15%;
         padding-bottom: 5%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
-
-        
-
-        
-
-      
-        
+        // border: 2px solid skyblue;
     }
 } 
+
+//media queries begin here
+@include desktop-small {
+    header {
+
+        .title {
+            @include font-size(160)
+        }
+    }
+}
+

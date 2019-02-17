@@ -15,9 +15,19 @@ h2 {
     margin: 0;
 }
 
-h3 {
-    color: $secondary-colour;
+h2, h3, h4, p, input[type="text"], {
     font-family: $secondary-font;
+    font-weight: 300;
+
+}
+
+input[type="submit"], #name-button {
+    font-family: $secondary-font;
+    font-weight: 700;
+}
+
+h3 {
+    color: $secondary-colour; 
     @include font-size(90);
     @include line-height(90);
 }

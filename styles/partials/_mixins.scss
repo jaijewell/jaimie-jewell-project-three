@@ -11,19 +11,19 @@
 
 
 //media query mixins
- @mixin desktopLarge {
+ @mixin desktop-large {
    @media (max-width: 1600px) {@content};
  }
 
- @mixin desktopSmall {
+ @mixin desktop-small {
    @media (max-width: 1200px) {@content};
  }
 
- @mixin tabletLarge {
+ @mixin tablet-large {
    @media(max-width: 900px) {@content};
  }
 
-  @mixin tabletSmall {
+  @mixin tablet-small {
    @media(max-width: 600px) {@content};
  }
 
