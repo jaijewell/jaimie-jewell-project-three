@@ -11,7 +11,8 @@ form:not(.form-reset) {
 }
 
 input[type=text] {
-    width: 400px;
+    margin-top: 10%;
+    width: 450px;
     height: 50px;
     padding: 15px;
 }
@@ -25,3 +26,10 @@ input[type=submit] {
     background-color: $primary-accent;
 }
 
+.name-form input[type="text"] {
+    text-transform: capitalize;
+}
+
+// .user-input input[type="text"] {
+//     width: 100%;
+// }

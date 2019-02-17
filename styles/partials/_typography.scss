@@ -11,13 +11,13 @@ h2 {
     @include line-height(35);
 }
 
- h1, h2, h3, h4 {
+ h1, h2, h3, h4, p {
     margin: 0;
 }
 
 h3 {
     color: $secondary-colour;
     font-family: $secondary-font;
-    @include font-size(80);
-    @include line-height(80);
+    @include font-size(90);
+    @include line-height(90);
 }

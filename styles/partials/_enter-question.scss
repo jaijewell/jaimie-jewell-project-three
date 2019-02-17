@@ -8,14 +8,36 @@
     .question-instructions {
        display: flex;
        flex-direction: column;
-       align-items: flex-end;
+       align-items: flex-end; 
+    }
+    
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-       p {
-           padding-left: 33.5%;
-       }
+    .intro {
+        width: 70%;
     }
 }
 
+    .print-name {
+        @include font-size(28);
+        @include line-height(28);
+    
+
+        span {
+            display: inline-block;
+            color: $primary-accent;
+            @include font-size(42);
+            @include line-height(42);
+            letter-spacing: 2px;
+        }
+    }
+}
+
+
+//decorartive
 .decorative-question {
     height: 30%;
     width: 25%;

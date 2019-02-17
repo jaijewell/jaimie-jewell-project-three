@@ -171,16 +171,16 @@ h2 {
   line-height: 56;
   line-height: 2.8rem; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin: 0; }
 
 h3 {
   color: white;
   font-family: "Lato", sans-serif;
-  font-size: 80px;
-  font-size: 4rem;
-  line-height: 128;
-  line-height: 6.4rem; }
+  font-size: 90px;
+  font-size: 4.5rem;
+  line-height: 144;
+  line-height: 7.2rem; }
 
 .wrapper {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#302f30), color-stop(#2d2c2e), color-stop(#2a2a2b), color-stop(#282729), color-stop(#252526), color-stop(#242425), color-stop(#232425), color-stop(#222324), color-stop(#232425), color-stop(#232526), color-stop(#242626), to(#252727));
@@ -206,6 +206,7 @@ span {
   display: block; }
 
 a {
+  cursor: pointer;
   margin-top: 10%;
   padding: 25px;
   width: 50%;
@@ -279,7 +280,8 @@ form:not(.form-reset) {
   padding: 10px; }
 
 input[type=text] {
-  width: 400px;
+  margin-top: 10%;
+  width: 450px;
   height: 50px;
   padding: 15px; }
 
@@ -290,6 +292,9 @@ input[type=submit] {
   margin-top: 10%;
   color: white;
   background-color: #ab20fd; }
+
+.name-form input[type="text"] {
+  text-transform: capitalize; }
 
 .enter-name {
   display: -webkit-box;
@@ -308,9 +313,9 @@ input[type=submit] {
   position: relative; }
 
 .decorative-name {
+  margin-right: -12%;
   height: 40%;
   width: 40%;
-  border-bottom-left-radius: 50%;
   position: absolute;
   right: 0;
   top: 0; }
@@ -344,8 +349,32 @@ input[type=submit] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end; }
-    .enter-question .question-instructions p {
-      padding-left: 33.5%; }
+  .enter-question .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .enter-question .text .intro {
+      width: 70%; }
+  .enter-question .print-name {
+    font-size: 28px;
+    font-size: 1.4rem;
+    line-height: 44.8;
+    line-height: 2.24rem; }
+    .enter-question .print-name span {
+      display: inline-block;
+      color: #ab20fd;
+      font-size: 42px;
+      font-size: 2.1rem;
+      line-height: 67.2;
+      line-height: 3.36rem;
+      letter-spacing: 2px; }
 
 .decorative-question {
   height: 30%;
@@ -359,9 +388,22 @@ input[type=submit] {
     height: 100%;
     width: 100%; }
 
+.display-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("../assets/noun-eight-ball.svg") no-repeat;
+  background-position: bottom right; }
+
+.result-text span {
+  color: #ab20fd; }
+
+.result-text .user-question span {
+  display: inline-block; }
+
 .reset .form-reset {
   width: 100%;
-  height: 25vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -48,6 +48,12 @@ myApp.answers = [
                 scrollTop: $('#question').offset().top
             }, 1000);
         }) // smooth scroll from submit name to question
+
+        $('#submit').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $('#result').offset().top
+            }, 1000);
+        }) // smooth scroll from submit name to question
         
         //form submit for name
         $('.name-form').on('submit', function (e) {
@@ -63,7 +69,7 @@ myApp.answers = [
 
             myApp.printNametoPage = function () {
                 //print to page, the user's question & Magic 8 Ball Fortune
-                myApp.$name.html(`<p class="print-name">Is this your first time ${myApp.$userName}? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);
+                myApp.$name.html(`<p class="print-name">Is this your first time <span>${myApp.$userName} </span>? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);
                 };//printNameToPage function end here
 
             myApp.userNameInput();
@@ -95,8 +101,8 @@ myApp.answers = [
                 //variable to store value of myApp.randoNum()
                 let random = myApp.randoNum();
                 //print to page, the user's question & Magic 8 Ball Fortune
-                myApp.$question.html(`<h2 class="print-question">You typed ${myApp.$userQuestion} ?</h2>`);
-                myApp.$fortune.html(`<h2 class="answer">Magic 8 ball says: ${myApp.answers[random]}</h2>`);
+                myApp.$question.html(`<h3 class="print-question">You typed <span>${myApp.$userQuestion}</span>?</h3>`);
+                myApp.$fortune.html(`<h3 class="answer">Magic 8 ball says: <span>${myApp.answers[random]}</span></h3>`);
             };
             
             myApp.randoNum(); // calling randoNum Function
