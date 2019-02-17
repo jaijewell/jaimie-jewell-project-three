@@ -29,146 +29,106 @@ myApp.answers = [
     "You may rely on it"
 ];
 
-//event listener for submit buttons
-    myApp.handleSubmit = function(){
-        
-        $('#name-button').on('click', function () {
-            $('html, body').animate({
-            scrollTop: $('#name').offset().top
-             }, 1000);
-        }); //smooth scroll from header a tag click to name entry, found on stack overflow
-
-        $('#submit-name').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $('#question').offset().top
-            }, 1000);
-        }) // smooth scroll from submit name to question
-
-        $('#submit').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $('#result').offset().top
-            }, 1000);
-        }) // smooth scroll from submit name to question
-        
-        //form submit for name
-        $('.name-form').on('submit', function (e) {
-            e.preventDefault();
-            
-            myApp.userNameInput = function () {
-                if ($('.name-form input[type=text]').val() !== '') {
-                    myApp.$nameInput = $('.name-form input[type=text]').val();
-                    myApp.$userName = myApp.$nameInput
-                } else { //error handling blank myApp.$nameInput
-                    myApp.$nameInput = "human"; 
-                    myApp.$userName = myApp.$nameInput;
-                }
-            } //userNameInput function ends here
-
-            
-            myApp.printNametoPage = function () {
-                //print to page, the user's question & Magic 8 Ball Fortune
-                myApp.$name.html(`<p class="print-name">Is this your first time <span>${myApp.$userName} </span>? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);
-                };//printNameToPage function end here
-
-            myApp.userNameInput();
-            myApp.printNametoPage();
-            }); // .submit-name on submit ends here
-           
-        //form submit for question
-        $('.form-submit').on('submit', function (e) {
-            e.preventDefault();
-
-            //method on submit to randomize answers.
-            myApp.randoNum = () => {
-                return Math.floor(Math.random() * myApp.answers.length);
-            };  //randoNum method ends here
-   
-            //conditional to determine if user left input box blank
-            myApp.userInputValue = function() {
-                if ($('.form-submit input[type=text]').val() !== '') {
-                    //$questionInput is equal to the value of the user input
-                    myApp.$questionInput = $('.form-submit input[type=text]').val();
-                    //the empty $userQuestion variable defined at the top is equal to $questionInput
-                    myApp.$userQuestion = myApp.$questionInput
-                };    
-                console.log(myApp.$userQuestion)
-            }; //userInput ends here
-            
-            
-            myApp.printToPage = function (item) {
-                //variable to store value of myApp.randoNum()
-                let random = myApp.randoNum();
-                //print to page, the user's question & Magic 8 Ball Fortune
-                myApp.$question.html(`<h3 class="print-question">You typed <span>${myApp.$userQuestion}</span>?</h3>`);
-                myApp.$fortune.html(`<h3 class="answer">Magic 8 ball says: <span>${myApp.answers[random]}</span></h3>`);
-            };
-            
-            myApp.randoNum(); // calling randoNum Function
-            myApp.userInputValue(); //calling userInputValue Function
-            myApp.printToPage(); // calling printToPage Function
-        });
-    } //handleSubmit ends here
-
-
-
-    
-// myApp.userNameValue = function () {
-//     if ($('.name-form-container input[type=text]').val().length !== '') {
-//         myApp.$nameInput = $('input[type=text]').val();
-//         myApp.$userName = myApp.$nameInput
-//     };
-//     userNameValue()
-//     console.log(myApp.$userName)
-// }
-    
-
-
-    
-    // () => {
-    //     if ($('.name-form-container input[type=text]').val() !== '') {
-    //         //$nameInput is equal to the value of the user input
-    //         myApp.$nameInput = $('input[type=text]').val();
-    //         //the empty $userName variable defined at the top is equal to $nameInput
-    //         myApp.$userName = myApp.$nameInput
-        // }; 
-        // myApp.userNameInput();
-   
-
-
-
-
-
-//clear fortune, and clear users printed input so they can enter something else into the input field. 
-    myApp.clearInput = function () {
-        $('.re-submit').on('submit', function () {
-            $('.intro').val('');
-            $('.user-input').val('');
-            $('.fortune').empty('')
-            
-            $('html, body').animate({
-                scrollTop: $('#question').offset().top
-            }, 2000);
-        });
-    }; 
-    
-//initializing everything on page load
-    myApp.init = function(){
-        myApp.handleSubmit(); //calling handleSubmit Function
-        myApp.clearInput(); // calling clearInput Function
-        // myApp.userNameInput();
+//saving user's input from .name-form 
+myApp.userNameInput = function () {
+    if ($('.name-form input[type=text]').val() !== '') {
+        //$questionInput is equal to the value of the user input if not blank
+        myApp.$nameInput = $('.name-form input[type=text]').val();
+        //myApp.$userName var is defined at line 2, here, we are giving it a value
+        myApp.$userName = myApp.$nameInput
+    } else { //error handling blank myApp.$nameInput. Name input is NOT requiured
+        myApp.$nameInput = "human"; //print "human" instead
+        myApp.$userName = myApp.$nameInput;
     };
+}  //userNameInput function ends here
 
-    //animation
-    // $(window).scroll(function() {
-    //     $('.animated').each(function () {
-    //         let imagePos = $(this).offset().top;
+//printing user's input from .name-form to the question section
+myApp.printNametoPage = function () {
+    myApp.$name.html(`<p class="print-name">Is this your first time <span>${myApp.$userName} </span>? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);
+}; //printNameToPage function end here
 
-    //         let topOfWindow = $(window).scrollTop();
-    //         if (imagePos < topOfWindow + 400) {
-    //             $(this).addClass("slideUp");
-    //         }
-    //     });
-    // });
+//randomize array of answers
+myApp.randoNum = () => {
+    return Math.floor(Math.random() * myApp.answers.length);
+};  //randoNum method ends here
+
+//saving user's input from .form-submit
+myApp.userInputValue = function () {
+    if ($('.form-submit input[type=text]').val() !== '') {
+        //$questionInput is equal to the value of the user input if not blank
+        myApp.$questionInput = $('.form-submit input[type=text]').val();
+        //myApp.$userQuestion var is defined at line 3, here, we are giving it a value
+        myApp.$userQuestion = myApp.$questionInput
+    };
+    console.log(myApp.$userQuestion)
+}; //userInput ends here
+
+myApp.printToPage = function (item) {
+    //variable to store value of myApp.randoNum()
+    let random = myApp.randoNum();
+    //print to page, the user's question & Magic 8 Ball Fortune
+    myApp.$question.html(`<h3 class="print-question">You typed <span>${myApp.$userQuestion}</span>?</h3>`);
+    myApp.$fortune.html(`<h3 class="answer">Magic 8 ball says: <span>${myApp.answers[random]}</span></h3>`);
+};
+
+myApp.clearInput = function () {
+    $('.intro').val('');
+    $('.user-input').val('');
+    $('.fortune').empty('')
+    $('html, body').animate({
+        scrollTop: $('#question').offset().top
+    }, 2000);
+}; 
+
+//event listener for submit buttons
+myApp.handleSubmit = function(){
+        
+//smooth scrolling functions (adpated from stack overflow)  
+    $('#name-button').on('click', function () {
+        $('html, body').animate({
+        scrollTop: $('#name').offset().top
+            }, 1000);
+    }); //smooth scroll from header a tag click -> name entry
+
+    $('#submit-name').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('#question').offset().top
+        }, 1000);
+    }) // smooth scroll from submit name -> question
+
+    $('#submit').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('#result').offset().top
+        }, 1000);
+    }) // smooth scroll from submit name -> question
+        
+//form submit for name
+    $('.name-form').on('submit', function (e) {
+        e.preventDefault(); //prevent default refresh
+        myApp.userNameInput(); //calling global function
+        myApp.printNametoPage(); //calling global function
+    }); // .submit-name on submit ends here
+           
+//form submit for question
+    $('.form-submit').on('submit', function (e) {
+        e.preventDefault(); //prevent default refresh
+        myApp.randoNum(); // calling global function
+        myApp.userInputValue(); //calling global  function
+        myApp.printToPage(); // calling global function
+    });
+
+    $('.re-submit').on('submit', function () {
+        myApp.clearInput();
+    }); 
+} //handleSubmit ends here
+
+
+//initializing everything on page load
+myApp.init = function(){
+    myApp.handleSubmit(); //calling handleSubmit Function
+    myApp.clearInput(); // calling clearInput Function
+    // myApp.userNameInput();
+};
 
 $(function(){
     myApp.init();
