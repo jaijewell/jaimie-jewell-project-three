@@ -265,9 +265,6 @@ header {
     -ms-flex-pack: end;
     justify-content: flex-end; }
 
-.form-container {
-  border: 2px dotted green; }
-
 form:not(.form-reset) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,68 +308,15 @@ input[type=submit] {
   position: relative; }
 
 .decorative-name {
-  height: 30%;
-  width: 25%;
-  border: 2px solid #ab20fd;
-  border-bottom-left-radius: 100%;
+  height: 40%;
+  width: 40%;
+  border-bottom-left-radius: 50%;
   position: absolute;
   right: 0;
   top: 0; }
-  .decorative-name i {
-    height: 20px;
-    width: 15px;
-    position: relative; }
-  .decorative-name .icon1 {
-    top: 5px;
-    right: -200px; }
-  .decorative-name .icon2 {
-    top: 60px;
-    right: -250px; }
-  .decorative-name .icon3 {
-    top: 100px;
-    right: -225px; }
-  .decorative-name .icon4 {
-    top: 10px;
-    right: -150px; }
-  .decorative-name .icon5 {
-    top: 17px;
-    right: -195px; }
-  .decorative-name .icon6 {
-    top: 30px;
-    right: -200px; }
-  .decorative-name .icon7 {
-    top: 5px;
-    right: 25px; }
-  .decorative-name .icon8 {
-    top: 50px;
-    right: 30px; }
-  .decorative-name .icon10 {
-    top: 25px;
-    right: 5px; }
-  .decorative-name .icon11 {
-    top: 100px;
-    right: 5px; }
-  .decorative-name .icon12 {
-    top: 120px;
-    right: 50px; }
-  .decorative-name .icon13 {
-    top: 50px;
-    right: 75px; }
-  .decorative-name .icon14 {
-    top: 80px;
-    right: 50px; }
-  .decorative-name .icon15 {
-    top: 55px;
-    right: 200px; }
-  .decorative-name .icon16 {
-    top: 85px;
-    right: 215px; }
-  .decorative-name .icon17 {
-    top: 50px;
-    right: 275px; }
-  .decorative-name .icon18 {
-    top: 75px;
-    right: -100px; }
+  .decorative-name img {
+    width: 100%;
+    border-bottom-left-radius: 100%; }
 
 .enter-question {
   display: -webkit-box;

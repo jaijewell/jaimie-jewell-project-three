@@ -33,14 +33,16 @@
     <main>
         <section class="enter-name form-container" id="name">
             <h3>What should I call you?</h3>
-            <form class="name-form-container" action="">   
+            <form class="name-form" action="">   
                 <label for="user-name" class="visually-hidden">Please enter your name</label>
                 <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
-                <a href="#user-input">Submit Name</a>
-                <!-- <input type="submit" id="submit-name" value="Submit Name"> -->
+                
+                <label for="submit-name" class="visually-hidden">Submit Name</label>
+                <input type="submit" id="submit-name" class="submit-name" value="Submit Name">
             </form>
-            <div class="animated decorative-name">
-                <i class="fas fa-question floating icon1"></i>
+            <div class="decorative-name">
+                <img src="assets/question-decoration.png" alt="decorative marks">
+                <!-- <i class="fas fa-question floating icon1"></i>
                 <i class="fas fa-question floating icon2"></i>
                 <i class="fas fa-question floating icon3"></i>
                 <i class="fas fa-question floating icon4"></i>
@@ -59,7 +61,7 @@
                 <i class="fas fa-question floating icon17"></i>
                 <i class="fas fa-question floating icon18"></i>
                 <i class="fas fa-question floating icon19"></i>
-                <i class="fas fa-question floating icon20"></i>
+                <i class="fas fa-question floating icon20"></i> -->
             </div>
         </section>
         <section class="enter-question form-container" id="question">
@@ -85,11 +87,11 @@
             </div>
             <h3>Gimme your question</h3>
             <div class="question-instructions">
-                <p>Is this your first time? Nice. Ask questions that can be answered with yes, no or maybe.</p>
+                <div class="intro"></div>
                 <form class="form-submit" action="">
                     <label for="user-input" class="visually-hidden">Ask your question</label>
                     <input type="text" class="user-input" id="user-input" 
-                    name="question" placeholder="Ask your question" minlength= 5>
+                    name="question" placeholder="Ask your question" required minlength= 5>
                     <label for="submit" class="visually-hidden">Submit Question</label>
                     <input type="submit" id="submit" value="Shake the Eight">
                 </form>
