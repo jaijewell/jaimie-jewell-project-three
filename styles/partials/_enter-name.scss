@@ -2,20 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     // border: 2px solid yellow;
 }
 
 .decorative-name {
     order: 2;
     padding-right: -10%;
-    background: url('../assets/question-vertical.png') no-repeat;
+    background: url('../assets/question-mark.png') no-repeat;
     height: 95vh;
     background-size: cover;
     background-position: center;
-    // min-height: 100%;
     width: 30vw;
-    // border: 2px solid pink;
+  
 } //decorative-name styling ends here
 
 // media queries begin here
@@ -32,12 +30,6 @@
         width: 20vw;
     }
 } //1066 media query ends here
-
-// @media (max-width: 950px) {
-//     .decorative-name {
-//         width: 10vw;
-//     }
-// } //950px media query ends here
 
 @media (max-width: 775px) { 
    //form-container is the wrapper for both enter-name and enter-question forms
@@ -78,8 +70,6 @@
         }
     }
 } //tablet-small media query ends here
-
-
 
 @include phone-small {
     .enter-name {

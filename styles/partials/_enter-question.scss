@@ -1,9 +1,8 @@
 .enter-question {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     .question-instructions {
        display: flex;
@@ -37,23 +36,22 @@
 } //enter-question styling ends here
 
 .decorative-question {
-    margin-left: -12%;
-    height: 40%;
-    width: 40%;
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    img {
-        width: 100%;
-        border-bottom-right-radius: 100%;
-    }
-} //decorative-question styling ends here
+    // order: 2;
+    padding-left: -10%;
+    background: url('../assets/questions.png') no-repeat;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    width: 30vw;
+  
+} //decorative-name styling ends here //decorative-question styling ends here
 
 //media queries begin here
 @include desktop-small {
     .decorative-question {
         margin-right: -5%;
+        width: 28vw;
+        background-position:right
     }
 } //desktop-small media query ends here
 
