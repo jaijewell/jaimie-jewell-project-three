@@ -1,104 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Magic Eight Ball</title>
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Lato:300,700" rel="stylesheet">
+        <!-- favicon using RealFaviconGenerator-->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
+        <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
 
-    <!-- jquery shake effect
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Lato:300,700" rel="stylesheet">
 
-    <!-- style sheet -->
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Magic Eight Ball</title>
-</head>
-<body>
-    <div class ="wrapper"> <!-- wrapper for entire page -->
-        <header>
-            <div class="title" id="heading">
-                <h1>Shake <span>the Eight!</span></h1>
-            </div>
-            <div class="instructions-container">
-                <div class="instructions">
-                    <h2>Shake the eight ball and get your burning questions answered. This is 100% accurate</h2>
-                    <a id="name-button">Shake the Eight</a>
+        <!-- style sheet -->
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div class ="wrapper"> <!-- wrapper for entire page -->
+            <header>
+                <div class="title" id="heading">
+                    <h1>Shake <span>the Eight!</span></h1>
                 </div>
-            </div>
-        </header>
-        <main>
-            <section class="enter-name form-container" id="name">
-                <h3>What should I call you?</h3>
-                <form class="name-form" action="">   
-                    <label for="user-name" class="visually-hidden">Please enter your name</label>
-                    <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
-                    <label for="submit-name" class="visually-hidden">Submit Name</label>
-                    <input type="submit" id="submit-name" class="submit-name" value="Submit Name">
-                </form>
-                <div class="decorative-name">
-                    <img src="assets/question-decoration.png" alt="decorative marks">
-                </div>
-            </section>
-            <section class="enter-question form-container" id="question">
-                <div class="animated decorative-question">
-                    <img src="assets/question-decoration.png" alt="decorative marks">
-                </div> 
-                <div class="question-instructions">
-                    <div class="text">
-                        <h3>Gimme your question</h3>
-                        <div class="intro"></div>
+                <div class="instructions-container">
+                    <div class="instructions">
+                        <h2>Shake the eight ball and get your burning questions answered. This is 100% accurate</h2>
+                        <a id="name-button">Shake the Eight</a>
                     </div>
-                    <form class="form-submit" action="">
-                        <label for="user-input" class="visually-hidden">Ask your question</label>
-                        <input type="text" class="user-input" id="user-input" 
-                        name="question" placeholder="Ask your question" minlength= 5>
-                        <label for="submit" class="visually-hidden">Submit Question</label>
-                        <input type="submit" id="submit" value="Shake the Eight">
-                    </form>
                 </div>
-            </section> 
-            <section class="display-results" id="result">
-                <div class="image-container">
-                    <img id="shake" src="assets/noun-eight-ball.svg" alt="magic 8 ball">
-                </div>
-                <div class="result-text">
-                    <div class="user-question"></div>
-                    <div class="fortune"></div>
-                </div>
-            </section>
-            <section class="reset" id="reset-button">
-                <div>
-                    <form class="form-reset" action="">
-                        <label for="re-submit" class="visually-hidden">Submit Question</label>
-                        <input type="submit" id="re-submit" class="re-submit-button" value="Again">
-                </form>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <h4>Copyright &copy 2019 Jaimie Jewell</h4>
-        </footer>
-    </div>
+            </header>
+            <main>
+                <section class="enter-name form-container" id="name">
+                    <div class="decorative-name">
+                        <!-- <img src="assets/question-decoration.png" alt="decorative question marks randomly placed contained inside an image"> -->
+                    </div>
+                    <div class="content-container">
+                        <div class="name-text">
+                            <h3>What should I call you?</h3>
+                        </div>
+                        <!-- name-form with several js functions on submit begins here -->
+                        <form class="name-form" action="">   
+                            <label for="user-name" class="visually-hidden">Please enter your name</label>
+                            <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
+                            <label for="submit-name" class="visually-hidden">Submit Name</label>
+                            <input type="submit" id="submit-name" class="submit-name" value="Submit Name">
+                        </form>
+                        <!-- name-form with several js functions on submit ends here -->
+                    </div>  
+                </section>
+                <section class="enter-question form-container" id="question">
+                    <div class="animated decorative-question">
+                        <!-- <img src="assets/question-horizontal.png" alt="decorative question marks randomly placed contained inside an image"> -->
+                    </div> 
+                    <div class="question-instructions">
+                        <div class="text">
+                            <h3>Gimme your question</h3>
+                            <!-- .intro - js name-form input is printed - begins here -->
+                            <div class="intro"></div>
+                            <!-- .intro - js name-form input is printed - ends here -->
+                        </div>
+                        <!-- form-submit with several js functions on submit begins here -->
+                        <form class="form-submit" action="">
+                            <label for="user-input" class="visually-hidden">Ask your question</label>
+                            <input type="text" class="user-input" id="user-input" 
+                            name="question" placeholder="Ask your question" minlength= 5>
+                            <label for="submit" class="visually-hidden">Submit Question</label>
+                            <input type="submit" id="submit" value="Shake the Eight">
+                        </form>
+                        <!-- form-submit with several js functions on submit ends here -->
+                    </div>
+                </section> 
+                <section class="display-results" id="result">
+                    <div class="results-wrapper">
+                        <div class="image-container">
+                            
+                        </div>
+                        <!-- div printing input begins here -->
+                        <div class="result-text">
+                            <div class="user-question"></div>
+                            <div class="fortune"></div>
+                        </div>
+                    </div>
+                    <!-- div printing user input ends here -->
+                </section>
+                <!--#reset-button with functions on click begins here -->
+                <section class="reset" id="reset-button">
+                    <div>
+                        <form class="form-reset" action="">
+                            <label for="re-submit" class="visually-hidden">Submit Question</label>
+                            <input type="submit" id="re-submit" class="re-submit-button" value="Again">
+                        </form>
+                    </div>
+                </section>
+                <!--#reset-button with functions on click ends here -->
+            </main>
+            <footer>
+                <h4>Copyright &copy 2019 Jaimie Jewell</h4>
+            </footer>
+        </div> <!-- page wrapper ends here-->
 
-   <!-- jquery CDN -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-   
-    <!-- smooth scroll CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+        <!-- jquery CDN -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     
-    <!-- sweet alerts 2 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.1.0/dist/sweetalert2.all.min.js"></script>
+        <!-- smooth scroll CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+        
+        <!-- sweet alerts 2 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.1.0/dist/sweetalert2.all.min.js"></script>
 
-    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and UC Browser support -->
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+        <!-- Include a polyfill for ES6 Promises (optional) for IE11 and UC Browser support -->
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
 
-    <!-- script sheet -->
-    <script src="script.js"></script>
-</body>
+        <!-- script sheet -->
+        <script src="script.js"></script>
+    </body>
 </html>

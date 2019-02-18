@@ -1,41 +1,85 @@
 .enter-name {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
+    // border: 2px solid yellow;
 }
 
-//animation
 .decorative-name {
-    margin-right: -12%;
-    height: 40%;
-    width: 40%;
+    order: 2;
+    padding-right: -10%;
+    background: url('../assets/question-vertical.png') no-repeat;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    // min-height: 100%;
+    width: 30vw;
+    // border: 2px solid pink;
+} //decorative-name styling ends here
 
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    img {
-        width: 100%;
-        border-bottom-left-radius: 100%;
-    }
-}
-
+// media queries begin here
 @include desktop-small {
     .decorative-name {
         margin-right: -5%;
+        width: 28vw;
+        background-position:right ;
     }
-}
+} //desktop-small media query ends here
+
+@media (max-width: 1066px) {
+    .decorative-name {
+        width: 20vw;
+    }
+} //1066 media query ends here
+
+// @media (max-width: 950px) {
+//     .decorative-name {
+//         width: 10vw;
+//     }
+// } //950px media query ends here
+
+@media (max-width: 775px) { 
+   //form-container is the wrapper for both enter-name and enter-question forms
+    .form-container {
+       height: 55vh;
+   }
+    .enter-name {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        // border: 2px solid yellow;
+
+        .decorative-name {
+            order: 0;
+            height: 40vh;
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+           
+            width: 100vw;
+            margin: 0;
+            // border: 2px solid pink;
+        }
+    }
+} //tablet-large media query ends here
 
 @include tablet-small {
+      //form-container is the wrapper for both enter-name and enter-question forms
+    .form-container {
+       height: 30vh;
+   }
+    
     .enter-name {
         h3 {
             @include font-size(75);
             @include line-height(75);
         }
     }
-}
+} //tablet-small media query ends here
+
+
 
 @include phone-small {
     .enter-name {
@@ -44,4 +88,4 @@
             @include line-height(60);
         }
     }
-}
+} //phone-small media query ends here

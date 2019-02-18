@@ -10,12 +10,11 @@ body {
 .wrapper {
     padding: 0 10%;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
-section:not(.reset):not(.display-results) {
-    min-height: 100vh; 
+.form-container {
+    min-height: 95vh; 
 }
 
 span {
@@ -35,11 +34,13 @@ a {
     border: 2px solid white;
 }
 
+//submit transition
 a,
 input[type="submit"] {
     transition: $transition-detail;
 }
-        
+ 
+//button hover
 a:hover,
 input[type="submit"]:hover {
     background-color: $secondary-colour;
@@ -53,12 +54,12 @@ a:focus {
     border: 2px solid $secondary-accent;
 }
 
-//media queries
+//media queries begin here
 @include desktop-small {
      .wrapper {
         padding: 0 5%;
     }
-}
+}//desktop-small  media query ends here
 
 @media(max-width: 622px) {
     .wrapper {
@@ -68,10 +69,4 @@ a:focus {
     header a {
         padding: 15px;
     }
-}
-
-
-
-@include phone-large { 
-    
-}
+} //622px media query ends here

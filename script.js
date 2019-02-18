@@ -4,6 +4,7 @@ const myApp = {}; //attempt to apply name spacing
     myApp.$name = $('.intro'); //defining variable for html class
     myApp.$fortune = $('.fortune'); //defining variable for html class
     myApp.$question = $('.user-question'); //defining variable for html class
+    myApp.$image = $('.image-container'); //defining variable for html class
 
     // array of possible answers .form-submit on submit
     myApp.answers = [
@@ -76,7 +77,7 @@ const myApp = {}; //attempt to apply name spacing
         if ($('.form-submit input[type=text]').val() !== '') {
             $('#submit').on('click', function () {
                 $('html, body').animate({
-                scrollTop: $('#result').offset().top
+                    scrollTop: $('#re-submit').offset().top
                 }, 1000);
             }); // smooth scroll from question -> fortune result
         } else if ($('.form-submit input[type=text]').val() === '') {
@@ -103,6 +104,7 @@ const myApp = {}; //attempt to apply name spacing
         //print to page, the user's question & Magic 8 Ball Fortune
         myApp.$question.html(`<h3 class="print-question"><span>${myApp.$userName}, </span> you asked: <span>${myApp.$userQuestion}</span>?</h3>`);
         myApp.$fortune.html(`<h3 class="answer">Magic 8 ball says: <span>${myApp.answers[random]}</span></h3>`);
+        myApp.$image.html('<img id="shake" src="assets/noun-eight-ball.svg" alt="magic 8 ball"></img>')
     }; //myApp.printToPage ends here
 
     myApp.clearInput = function () {

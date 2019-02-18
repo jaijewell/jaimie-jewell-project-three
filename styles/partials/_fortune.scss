@@ -1,6 +1,9 @@
-.display-results {
-    border: 2px solid thistle;
-    min-height: 80vh;
+// .display-results 
+
+.results-wrapper{
+    // border: 2px solid thistle;
+    padding: 5% 0;
+    // min-height: 60vh;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -16,13 +19,14 @@
        order: 2;
 
        img {
-           width: 100%;
+           width: 75%;
+        //    border: 2px dotted green;
        }
     }
 }
 
 .result-text {
-    border: 2px solid tomato;
+    border: 2px solid yellow;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +35,7 @@
 
     .user-question {
         width: inherit;// padding-bottom: 10%;
-        padding-right: 5%;  
+        padding: 0 5% 5% 0;  
         border: 2px solid skyblue;  
     }
 
@@ -43,8 +47,7 @@
     .fortune {
         width: inherit;
         text-align: right;
-        // padding: 5%;
-        border: 2px solid pink;
+        border: 2px solid red;
 
         span {
             display: block;
@@ -53,9 +56,12 @@
 }
 
 .reset {
+     border: 2px solid tomato;
+
     .form-reset {
         width: 100%;
-        height: 10vh;
+        // height: 10vh;
+        margin: 2% 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,11 +91,11 @@
     }
  }
 
-  @media (max-width: 640px) {
-     .result-text {
+@media (max-width: 640px) {
+    .result-text {
         h3 {
-            @include font-size(70);
-            @include line-height(70);
+            @include font-size(75);
+            @include line-height(75);
         }
     }
  }
@@ -97,21 +103,32 @@
 @include tablet-small {
     .result-text {
         h3 {
-            @include font-size(75);
-            @include line-height(75);
+            @include font-size(60);
+            @include line-height(60);
         }
     }
 
+    .result-text {
+        .user-question {
+            padding-right: 0;
+        }
+    }
     .fortune h3 {
         text-align: left;
+    }
+
+    .reset {
+        input[type="submit"] {
+            width: 30%;
+        }
     }
 }
 
 @include phone-small {
     .result-text {
         h3 {
-            @include font-size(60);
-            @include line-height(60);
+            @include font-size(50);
+            @include line-height(50);
         }
     }
 }

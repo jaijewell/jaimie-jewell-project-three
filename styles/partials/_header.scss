@@ -2,26 +2,18 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between ;
-    // border: 2px solid white;
-
+  
     .title {
-        // flex-grow: 1;
-        // flex-shrink: 0;
         width: 100%;
         padding-top: 10%;
         margin: 0;
-        // border: 2px solid salmon;
-
-        h1 {
-            // border: 2px solid pink;
-        };
     } 
 
     .instructions-container {
         display: flex;
         justify-content: flex-end;
     }
+
     .instructions {
         width: 50%;
         margin: 0;
@@ -29,9 +21,8 @@ header {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // border: 2px solid skyblue;
     }
-} 
+} //header styling ends here
 
 //media queries begin here
 @include desktop-small {    
@@ -39,10 +30,6 @@ header {
         h1 {
             @include font-size(180);
         }
-
-        // .instructions {
-        //     width: 100%;
-        // }
     }
 } //desktop-small media query ends here
 
@@ -59,7 +46,6 @@ header {
 
 @include tablet-small {
     header {
-        // height: 80vh;
         h1 {
             @include font-size(125);
             @include line-height(125);
@@ -96,8 +82,7 @@ header {
             width: 100%;
             align-items: center;
         }
-    } 
-    
+    }
 } //phone-large media query ends here
 
 @include phone-small {
