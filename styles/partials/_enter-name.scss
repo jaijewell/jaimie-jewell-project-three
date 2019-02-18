@@ -11,119 +11,37 @@
     margin-right: -12%;
     height: 40%;
     width: 40%;
-    // border: 2px solid $secondary-colour;
-    // border-bottom-left-radius: 100%;
-
 
     position: absolute;
     right: 0;
     top: 0;
 
     img {
-        // height: inherit;
-        // width: inherit;
         width: 100%;
         border-bottom-left-radius: 100%;
-        // object-fit: cover;
-        // position: relative;
     }
+}
 
+@include desktop-small {
+    .decorative-name {
+        margin-right: -5%;
+    }
+}
 
-    // .icon1 {
-    //     top: 5px;
-    //     right: -200px;
+@include tablet-small {
+    .enter-name {
+        h3 {
+            @include font-size(75);
+            @include line-height(75);
+        }
+    }
+}
 
-    // }
-
-    // .icon2{
-    //     top: 60px;
-    //     right: -250px;
-    // }
-
-    // .icon3{
-    //     top: 100px;
-    //     right: -225px;
-    // }
-
-    // .icon4 {
-    //     top: 10px;
-    //     right:-150px;
-    // }
-
-    // .icon5 {
-    //     top: 17px;
-    //     right: -195px;
-    // }
-
-    // .icon6{
-    //     top: 30px;
-    //     right: -200px;
-
-    // }
-
-    // .icon7 {
-    //     top: 5px;
-    //     right: 25px;
-    // }
-
-    // .icon8{
-    //     top: 50px;
-    //     right: 30px;
-    // }
-
-    // .icon10 {
-    //     top: 25px;
-    //     right: 5px;
-    // }
-
-    // .icon11 {
-    //     top: 100px;
-    //     right: 5px;
-    // }
-
-    // .icon12 {
-    //     top: 120px;
-    //     right: 50px;
-
-    // }
-
-    // .icon13 {
-    //     top: 50px;
-    //     right: 75px;
-
-    // }
-
-    // .icon14 {
-    //     top: 80px;
-    //     right: 50px;
-    // }
-
-    // .icon15 {
-    //     top: 55px;
-    //     right: 200px; 
-    // }
-
-    // .icon16{
-    //     top: 85px;
-    //     right: 215px;
-
-    // }
-
-    // .icon17 {
-    //     top: 50px;
-    //     right: 275px;
-    // }
-
-    // .icon18 {
-    //     top: 75px;
-    //     right: -100px;
-    // }
-
-    // .icon19 {
-
-    // }
-
-    // .icon20 {
-
-    // }
+@include phone-small {
+    .enter-name {
+        h3 {
+            @include font-size(60);
+            @include line-height(60);
+        }
+    }
 }

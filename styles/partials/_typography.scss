@@ -1,8 +1,8 @@
 h1 {
     font-family: $primary-font;
     color: $primary-accent;
-    @include font-size(200);
-    @include line-height(200);
+    @include font-size(190);
+    @include line-height(190);
 }
 
 h2 {
@@ -30,4 +30,5 @@ h3 {
     color: $secondary-colour; 
     @include font-size(90);
     @include line-height(90);
+    // border: 2px solid tomato;
 }

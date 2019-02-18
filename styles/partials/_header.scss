@@ -1,35 +1,126 @@
 header {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-between ;
+    // border: 2px solid white;
 
     .title {
-        flex: 1, 150px;
+        // flex-grow: 1;
+        // flex-shrink: 0;
         width: 100%;
         padding-top: 10%;
         margin: 0;
         // border: 2px solid salmon;
+
+        h1 {
+            // border: 2px solid pink;
+        };
     } 
 
+    .instructions-container {
+        display: flex;
+        justify-content: flex-end;
+    }
     .instructions {
-        width: 60%;
+        width: 50%;
         margin: 0;
         padding-bottom: 5%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-end;
         // border: 2px solid skyblue;
     }
 } 
 
 //media queries begin here
-@include desktop-small {
+@include desktop-small {    
     header {
+        h1 {
+            @include font-size(180);
+        }
 
-        .title {
-            @include font-size(160)
+        // .instructions {
+        //     width: 100%;
+        // }
+    }
+} //desktop-small media query ends here
+
+@include tablet-large {
+    header {
+        justify-content: center;
+        align-items: center;
+        h1 {
+            @include font-size(165);
+            @include line-height(165);
         }
     }
-}
+} //tablet-large media query ends here
 
+@include tablet-small {
+    header {
+        // height: 80vh;
+        h1 {
+            @include font-size(125);
+            @include line-height(125);
+        }
+
+        .instructions {
+            width: 60%;
+        }
+
+        h2 {
+            @include font-size(30);
+            @include line-height(30);
+        }
+    }
+} // tablet-small media query ends here
+
+@include phone-large {
+    header {
+        
+        align-items: center;
+        text-align: center;
+
+        .title {
+            padding-top: 0;
+        }
+
+         h1 {
+            @include font-size(100);
+            @include line-height(100);
+            padding-bottom: 10%;
+        }
+
+        .instructions {
+            width: 100%;
+            align-items: center;
+        }
+    } 
+    
+} //phone-large media query ends here
+
+@include phone-small {
+    header {
+
+        h1 {
+            @include font-size(85);
+            @include line-height(85);
+            padding-bottom: 10%;
+        }
+
+        h2 {
+            @include font-size(24);
+            @include line-height(24);
+        }
+
+        .instructions a {
+            margin-top: 20%;
+        }
+
+        .title,
+        .instructions-container {
+            padding: 0 5%;
+        }   
+    }
+}

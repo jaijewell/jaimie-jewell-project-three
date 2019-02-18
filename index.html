@@ -12,147 +12,93 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bangers|Lato:300,700" rel="stylesheet">
 
-
-    <!-- animations -->
-    <link rel="stylesheet" href="styles/animations.css">
+    <!-- jquery shake effect
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
 
     <!-- style sheet -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Magic Eight Ball</title>
 </head>
-<body class ="wrapper">
-    <header>
-        <div class="title" id="heading">
-            <h1>Shake <span>the Eight!</span></h1>
-        </div>
-        <div class="instructions">
-            <h2>Shake the eight ball and get your burning questions answered. This is 100% accurate</h2>
-            <a id="name-button">Shake the Eight</a>
-        </div>
-    </header>
-    <main>
-        <section class="enter-name form-container" id="name">
-            <h3>What should I call you?</h3>
-            <form class="name-form" action="">   
-                <label for="user-name" class="visually-hidden">Please enter your name</label>
-                <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
-                
-                <label for="submit-name" class="visually-hidden">Submit Name</label>
-                <input type="submit" id="submit-name" class="submit-name" value="Submit Name">
-            </form>
-            <div class="decorative-name">
-                <img src="assets/question-decoration.png" alt="decorative marks">
-                <!-- <i class="fas fa-question floating icon1"></i>
-                <i class="fas fa-question floating icon2"></i>
-                <i class="fas fa-question floating icon3"></i>
-                <i class="fas fa-question floating icon4"></i>
-                <i class="fas fa-question floating icon5"></i>
-                <i class="fas fa-question floating icon6"></i>
-                <i class="fas fa-question floating icon7"></i>
-                <i class="fas fa-question floating icon8"></i>
-                <i class="fas fa-question floating icon9"></i>
-                <i class="fas fa-question floating icon10"></i>
-                <i class="fas fa-question floating icon11"></i>
-                <i class="fas fa-question floating icon12"></i>
-                <i class="fas fa-question floating icon13"></i>
-                <i class="fas fa-question floating icon14"></i>
-                <i class="fas fa-question floating icon15"></i>
-                <i class="fas fa-question floating icon16"></i>
-                <i class="fas fa-question floating icon17"></i>
-                <i class="fas fa-question floating icon18"></i>
-                <i class="fas fa-question floating icon19"></i>
-                <i class="fas fa-question floating icon20"></i> -->
+<body>
+    <div class ="wrapper"> <!-- wrapper for entire page -->
+        <header>
+            <div class="title" id="heading">
+                <h1>Shake <span>the Eight!</span></h1>
             </div>
-        </section>
-        <section class="enter-question form-container" id="question">
-            <div class="animated decorative-question">
-                <p class="ans-one">yes</p>
-                <p class="ans-two">keep dreaming</p>
-                <p class="ans-three">Ask again later</p>
-                <p class="ans-four">Better not tell you now</p>
-                <p class="ans-five">definitely</p>
-                <p class="ans-six">doubtful</p>
-                <p class="ans-seven">Most likely</p>
-                <p class="ans-eight">probs</p>
-                <p class="ans-nine">yolo</p>
-                <p class="ans-ten">try again</p>
-                <p class="ans-eleven">outlook good</p>
-                <p class="ans-twelve">It is certain</p>
-                <p class="ans-thirteen">Don’t count on it</p>
-                <p class="ans-fourteen">Cannot predict now</p>
-                <p class="ans-fifteen">Outlook not so good</p>
-                <p class="ans-sixteen">nope</p>
-                <p class="ans-seventeen">not a chance</p>
-          
-            </div>
-            
-            <div class="question-instructions">
-                <div class="text">
-                    <h3>Gimme your question</h3>
-                    <div class="intro"></div>
+            <div class="instructions-container">
+                <div class="instructions">
+                    <h2>Shake the eight ball and get your burning questions answered. This is 100% accurate</h2>
+                    <a id="name-button">Shake the Eight</a>
                 </div>
-                <form class="form-submit" action="">
-                    <label for="user-input" class="visually-hidden">Ask your question</label>
-                    <input type="text" class="user-input" id="user-input" 
-                    name="question" placeholder="Ask your question" required minlength= 5>
-                    <label for="submit" class="visually-hidden">Submit Question</label>
-                    <input type="submit" id="submit" value="Shake the Eight">
+            </div>
+        </header>
+        <main>
+            <section class="enter-name form-container" id="name">
+                <h3>What should I call you?</h3>
+                <form class="name-form" action="">   
+                    <label for="user-name" class="visually-hidden">Please enter your name</label>
+                    <input type="text" class="name" id="user-name" placeholder="First name" maxlength=100>
+                    <label for="submit-name" class="visually-hidden">Submit Name</label>
+                    <input type="submit" id="submit-name" class="submit-name" value="Submit Name">
                 </form>
-            </div>
-        </section> 
-        
-        <section class="display-results" id="result">
-            <div class="result-text">
-                <div class="user-question"></div>
-                <div class="fortune"></div>
-            </div>
-            <!-- <div class="image-container">
-                <!-- leave empty for image -->
-            <!-- </div> -->
-        </section>
-        <section class="reset" id="reset-button">
-            <div>
-                <form class="form-reset" action="">
-                    <label for="re-submit" class="visually-hidden">Submit Question</label>
-                    <input type="submit" id="re-submit" class="re-submit" value="Again">
-              </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <h4>Copyright &copy 2019 Jaimie Jewell</h4>
-    </footer>
+                <div class="decorative-name">
+                    <img src="assets/question-decoration.png" alt="decorative marks">
+                </div>
+            </section>
+            <section class="enter-question form-container" id="question">
+                <div class="animated decorative-question">
+                    <img src="assets/question-decoration.png" alt="decorative marks">
+                </div> 
+                <div class="question-instructions">
+                    <div class="text">
+                        <h3>Gimme your question</h3>
+                        <div class="intro"></div>
+                    </div>
+                    <form class="form-submit" action="">
+                        <label for="user-input" class="visually-hidden">Ask your question</label>
+                        <input type="text" class="user-input" id="user-input" 
+                        name="question" placeholder="Ask your question" minlength= 5>
+                        <label for="submit" class="visually-hidden">Submit Question</label>
+                        <input type="submit" id="submit" value="Shake the Eight">
+                    </form>
+                </div>
+            </section> 
+            <section class="display-results" id="result">
+                <div class="image-container">
+                    <img id="shake" src="assets/noun-eight-ball.svg" alt="magic 8 ball">
+                </div>
+                <div class="result-text">
+                    <div class="user-question"></div>
+                    <div class="fortune"></div>
+                </div>
+            </section>
+            <section class="reset" id="reset-button">
+                <div>
+                    <form class="form-reset" action="">
+                        <label for="re-submit" class="visually-hidden">Submit Question</label>
+                        <input type="submit" id="re-submit" class="re-submit-button" value="Again">
+                </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h4>Copyright &copy 2019 Jaimie Jewell</h4>
+        </footer>
+    </div>
 
    <!-- jquery CDN -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- sweet alerts  -->
-    <!-- <script src="sweetalert2.all.min.js"></script> -->
+   
     <!-- smooth scroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    
+    <!-- sweet alerts 2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.1.0/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and UC Browser support -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
     <!-- script sheet -->
     <script src="script.js"></script>
 </body>
 </html>
-<!-- 
-
-MVP - 
-create an input, user types question that requires yes / no / maybe answer.
-array of standard answers to questions
-generate random answer to user's question
-print user's question and random answer to screen
-reset button
-
-
-stretch goals
-- create additional arrays
-- allow user to select which array the advice comes from 
-- e.g. humourous
-- advice from specific celebrity 
-- advice from grandparent?
-- advice in lyrics?
-
-styling 
-    - create the shape of an 8 ball to look like it would with the answer in the center
-    - animate 8ball so it appears to shake
- -->
-

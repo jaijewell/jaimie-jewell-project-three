@@ -3,21 +3,20 @@
 }
 
 form:not(.form-reset) {
-    // height: 18vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
 }
 
-input[type=text] {
+input[type='text'] {
     margin-top: 10%;
     width: 450px;
     height: 50px;
     padding: 15px;
 }
 
-input[type=submit] {
+input[type='submit'] {
     text-transform: uppercase;
     height: 70px;
     width: 50%;
@@ -26,10 +25,41 @@ input[type=submit] {
     background-color: $primary-accent;
 }
 
-.name-form input[type="text"] {
+.name-form input[type='text'] {
     text-transform: capitalize;
 }
 
-// .user-input input[type="text"] {
-//     width: 100%;
-// }
+@media(max-width: 556px) {
+    input[type='text'] {
+        width: 375px;
+    }
+} 
+
+
+
+@include phone-large {
+    input[type='text'] {
+        width: 325px;
+    }
+}
+
+@include phone-small {
+    input[type='text'] {
+        width: 280px;
+    }
+
+    .name-form input[type='submit'] {
+        height: 60px;
+    }
+
+    .form-submit input[type='submit'] {
+       @include font-size(17)
+        
+    }
+}
+
+@media(max-width: 358px) {
+    input[type='text'] {
+        width: 263px;
+    }
+}  

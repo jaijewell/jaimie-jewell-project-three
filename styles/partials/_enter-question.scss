@@ -24,8 +24,8 @@
     .print-name {
         @include font-size(28);
         @include line-height(28);
-    
-
+        // border: 2px solid tomato;
+        
         span {
             display: inline-block;
             color: $primary-accent;
@@ -36,23 +36,61 @@
     }
 }
 
-
-//decorartive
 .decorative-question {
-    height: 30%;
-    width: 25%;
-    border: 2px solid $primary-accent;
-    // border-top-left-radius:0;
-    // border-top-right-radius: 0;
-    // border-bottom-left-radius: 0;
-    border-bottom-right-radius: 100%;
-
+    margin-left: -12%;
+    height: 40%;
+    width: 40%;
     position: absolute;
     left: 0;
     top: 0;
 
-    i {
-        height: 100%;
+    img {
         width: 100%;
+        border-bottom-right-radius: 100%;
+    }
+}
+
+@include desktop-small {
+    .decorative-question {
+        margin-right: -5%;
+    }
+}
+
+@include tablet-large {
+    .enter-question {
+        .text .intro {
+            width: 81.5%;
+        }
+    }
+}
+
+@media(max-width: 739px) {
+    .enter-question {
+        .text .intro {
+            width: 100%;
+        }
+    }
+} // additional @739px media query to clean up h3 & .text and .intro
+
+
+@include tablet-small {
+    .enter-question {
+        h3 {
+            @include font-size(75);
+            @include line-height(75);
+        }
+        .print-name {
+            @include font-size(24);
+            @include line-height(24);
+        }
+    }
+}
+
+@include phone-small {
+    .enter-question {
+        h3 {
+            @include font-size(60);
+            @include line-height(60);
+        }
     }
 }

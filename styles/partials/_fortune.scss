@@ -1,27 +1,56 @@
 .display-results {
+    border: 2px solid thistle;
+    min-height: 80vh;
     display: flex;
-    // align-items: ;
-    background: url('../assets/noun-eight-ball.svg') no-repeat;
-    background-position: bottom right;
+    justify-content: space-between;
+    position: relative;
 
-    // .image-container {
-    //     height: 100vh;
-    //     width: 100vw;
-        
+    .image-container {
+       width:44%;
+    //    height: inherit;
+       position: absolute;
+       top: 0;
+       right: 0;
+    //    border: 2px solid yellow;
+       z-index: -10;
+       order: 2;
 
-    // }
+       img {
+           width: 100%;
+       }
+    }
 }
 
 .result-text {
+    border: 2px solid tomato;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .user-question {
+        width: inherit;// padding-bottom: 10%;
+        padding-right: 5%;  
+        border: 2px solid skyblue;  
+    }
+
     span {
         color: $primary-accent;
-    }
-    .user-question span {
-        
         display: inline-block;
     }
-}
 
+    .fortune {
+        width: inherit;
+        text-align: right;
+        // padding: 5%;
+        border: 2px solid pink;
+
+        span {
+            display: block;
+        }
+    }
+}
 
 .reset {
     .form-reset {
@@ -36,5 +65,53 @@
         width: 15%;
         padding: 0;
         margin: 0;
+    }
+}
+
+@include tablet-large {
+    .result-text {
+        h3 {
+            @include font-size(80);
+            @include line-height(80);
+        }
+    }
+}
+
+ @media (max-width: 774px) {
+     .result-text .user-question{
+         span {
+           display: inline;
+        }
+    }
+ }
+
+  @media (max-width: 640px) {
+     .result-text {
+        h3 {
+            @include font-size(70);
+            @include line-height(70);
+        }
+    }
+ }
+
+@include tablet-small {
+    .result-text {
+        h3 {
+            @include font-size(75);
+            @include line-height(75);
+        }
+    }
+
+    .fortune h3 {
+        text-align: left;
+    }
+}
+
+@include phone-small {
+    .result-text {
+        h3 {
+            @include font-size(60);
+            @include line-height(60);
+        }
     }
 }
