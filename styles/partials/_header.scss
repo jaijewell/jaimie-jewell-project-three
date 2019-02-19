@@ -22,7 +22,9 @@ header {
         flex-direction: column;
         align-items: flex-start;
     }
-} //header styling ends here
+} 
+
+//header styling ends here
 
 //media queries begin here
 @include desktop-small {    

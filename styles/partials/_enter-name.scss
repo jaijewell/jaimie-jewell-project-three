@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border: 2px solid yellow;
 }
 
 .decorative-name {
@@ -13,8 +12,9 @@
     background-size: cover;
     background-position: center;
     width: 30vw;
-  
-} //decorative-name styling ends here
+} 
+
+//section - enter-name form-container styling ends here
 
 // media queries begin here
 @include desktop-small {

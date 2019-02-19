@@ -162,7 +162,8 @@ h1 {
   font-size: 190px;
   font-size: 9.5rem;
   line-height: 304;
-  line-height: 15.2rem; }
+  line-height: 15.2rem;
+  letter-spacing: 3px; }
 
 h2 {
   color: white;

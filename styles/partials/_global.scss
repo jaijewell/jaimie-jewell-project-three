@@ -54,6 +54,8 @@ a:focus {
     border: 2px solid $secondary-accent;
 }
 
+//general global styling ends here
+
 //media queries begin here
 @include desktop-small {
      .wrapper {

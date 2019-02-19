@@ -1,6 +1,5 @@
 .enter-question {
     display: flex;
-    // flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -24,7 +23,6 @@
     .print-name {
         @include font-size(28);
         @include line-height(28);
-        // border: 2px solid tomato;
         
         span {
             display: inline-block;
@@ -37,15 +35,14 @@
 } //enter-question styling ends here
 
 .decorative-question {
-    // order: 2;
     padding-left: -10%;
     background: url('../assets/questions.png') no-repeat;
     height: 95vh;
     background-size: cover;
     background-position: center;
     width: 30vw;
-  
-} //decorative-name styling ends here //decorative-question styling ends here
+} 
+//general enter-question form-container styling ends here
 
 //media queries begin here
 @include desktop-small {
@@ -57,12 +54,6 @@
 } //desktop-small media query ends here
 
 @include tablet-large {
-    // .enter-question {
-    //     .text .intro {
-    //         width: 81.5%;
-    //     }
-    // }
-
     .enter-question {
         flex-direction: column;
         justify-content: space-between;
@@ -110,7 +101,7 @@
     .decorative-name {
         width: 20vw;
     }
-} //1066 media query ends here
+} //1066px media query ends here
 
 @include phone-small {
     .enter-question {
