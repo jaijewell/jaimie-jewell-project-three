@@ -21,7 +21,7 @@
     .decorative-name {
         margin-right: -5%;
         width: 28vw;
-        background-position:right ;
+        background-position:right;
     }
 } //desktop-small media query ends here
 
@@ -31,10 +31,10 @@
     }
 } //1066 media query ends here
 
-@media (max-width: 775px) { 
+@media (max-width: 900px) { 
    //form-container is the wrapper for both enter-name and enter-question forms
     .form-container {
-       height: 55vh;
+       height: 40vh;
    }
     .enter-name {
         flex-direction: column;

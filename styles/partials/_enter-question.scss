@@ -8,6 +8,7 @@
        display: flex;
        flex-direction: column;
        align-items: flex-end; 
+       padding-left: 5%;
     }
     
     .text {
@@ -56,12 +57,32 @@
 } //desktop-small media query ends here
 
 @include tablet-large {
+    // .enter-question {
+    //     .text .intro {
+    //         width: 81.5%;
+    //     }
+    // }
+
     .enter-question {
-        .text .intro {
-            width: 81.5%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        // border: 2px solid yellow;
+
+        .decorative-question {
+            order: 0;
+            height: 40vh;
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+            width: 100vw;
+            margin: 0;
+            // border: 2px solid pink;
         }
     }
 } //tablet-large media query ends here
+
 
 @media(max-width: 739px) {
     .enter-question {
@@ -84,6 +105,12 @@
         }
     }
 } //tablet-small media query ends here
+
+@media (max-width: 1066px) {
+    .decorative-name {
+        width: 20vw;
+    }
+} //1066 media query ends here
 
 @include phone-small {
     .enter-question {

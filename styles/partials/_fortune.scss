@@ -1,32 +1,24 @@
-// .display-results 
-
-.results-wrapper{
-    // border: 2px solid thistle;
+.results-wrapper {
     padding: 5% 0;
-    // min-height: 60vh;
     display: flex;
     justify-content: space-between;
     position: relative;
 
     .image-container {
        width:44%;
-    //    height: inherit;
        position: absolute;
        top: 0;
        right: 0;
-    //    border: 2px solid yellow;
        z-index: -10;
        order: 2;
 
        img {
            width: 75%;
-        //    border: 2px dotted green;
        }
     }
-}
+} //.results-wrapper styling ends here
 
 .result-text {
-    border: 2px solid yellow;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,9 +26,7 @@
     align-items: flex-start;
 
     .user-question {
-        width: inherit;// padding-bottom: 10%;
-        padding: 0 5% 5% 0;  
-        border: 2px solid skyblue;  
+        padding: 0 5% 5% 0;   
     }
 
     span {
@@ -47,20 +37,16 @@
     .fortune {
         width: inherit;
         text-align: right;
-        border: 2px solid red;
 
         span {
             display: block;
         }
     }
-}
+} //results-text styling ends here
 
 .reset {
-     border: 2px solid tomato;
-
     .form-reset {
         width: 100%;
-        // height: 10vh;
         margin: 2% 0;
         display: flex;
         justify-content: center;
@@ -72,7 +58,7 @@
         padding: 0;
         margin: 0;
     }
-}
+} //.reset styling ends here
 
 @include tablet-large {
     .result-text {
@@ -81,7 +67,7 @@
             @include line-height(80);
         }
     }
-}
+} //tablet-large media query ends here
 
  @media (max-width: 774px) {
      .result-text .user-question{
@@ -89,7 +75,7 @@
            display: inline;
         }
     }
- }
+} //774 media query ends here
 
 @media (max-width: 640px) {
     .result-text {
@@ -98,7 +84,7 @@
             @include line-height(75);
         }
     }
- }
+ } //640 media query ends here
 
 @include tablet-small {
     .result-text {
@@ -106,13 +92,14 @@
             @include font-size(60);
             @include line-height(60);
         }
-    }
+    } 
 
     .result-text {
         .user-question {
             padding-right: 0;
         }
     }
+
     .fortune h3 {
         text-align: left;
     }
@@ -122,7 +109,7 @@
             width: 30%;
         }
     }
-}
+} // tablet-small media query ends here
 
 @include phone-small {
     .result-text {
@@ -131,4 +118,4 @@
             @include line-height(50);
         }
     }
-}
+} //phone-small media query ends here
