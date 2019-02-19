@@ -378,7 +378,7 @@ input[type='text'] {
   margin-top: 10%;
   width: 450px;
   height: 50px;
-  padding: 15px; }
+  padding: 25px; }
 
 input[type='submit'] {
   text-transform: uppercase;
@@ -421,7 +421,8 @@ input[type='submit'] {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 10%; }
 
 .decorative-name {
   -webkit-box-ordinal-group: 3;
@@ -446,7 +447,7 @@ input[type='submit'] {
 
 @media (max-width: 900px) {
   .form-container {
-    height: 40vh; }
+    height: 50vh; }
   .enter-name {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -495,7 +496,8 @@ input[type='submit'] {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 10%; }
   .enter-question .question-instructions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -525,7 +527,8 @@ input[type='submit'] {
     font-size: 28px;
     font-size: 1.4rem;
     line-height: 44.8;
-    line-height: 2.24rem; }
+    line-height: 2.24rem;
+    padding-bottom: 5%; }
     .enter-question .print-name span {
       display: inline-block;
       color: #ab20fd;

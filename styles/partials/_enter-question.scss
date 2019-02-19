@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10%;
 
     .question-instructions {
        display: flex;
@@ -23,6 +24,7 @@
     .print-name {
         @include font-size(28);
         @include line-height(28);
+        padding-bottom: 5%;
         
         span {
             display: inline-block;
