@@ -1,6 +1,6 @@
-const myApp = {}; //attempt to apply name spacing
-    myApp.$userName = ''; //empty space for $userName re: printNameToPage
-    myApp.$userQuestion = ''; //empty space for $userQuestion re: printToPage
+const myApp = {}; //attempt to apply name spacing 🤷‍♀️
+    myApp.$userName = ''; //empty var for $userName re: printNameToPage
+    myApp.$userQuestion = ''; //empty var for $userQuestion re: printToPage
     myApp.$name = $('.intro'); //defining variable for html class
     myApp.$fortune = $('.fortune'); //defining variable for html class
     myApp.$question = $('.user-question'); //defining variable for html class
@@ -39,20 +39,20 @@ const myApp = {}; //attempt to apply name spacing
             //myApp.$userName var is defined at line 2, here, we are giving it a value
             myApp.$userName = myApp.$nameInput
         } else { //error handling blank myApp.$nameInput. Name input is NOT requiured
-            myApp.$nameInput = 'human'; //print "human" instead of name Input
+            myApp.$nameInput = 'human'; //print "human" instead of nameInput
             myApp.$userName = myApp.$nameInput;
         };
-    }  //myApp.userNameInput function ends here
+    }  //myApp.userNameInput function ends here - global
 
     //printing user's input from .name-form to the question section
     myApp.printNameToPage = function () {
         myApp.$name.html(`<p class="print-name">Is this your first time <span>${myApp.$userName} </span>? Nice. Ask questions that can be answered with yes, no or maybe.</p>`);
-    }; //myApp.printNameToPage ends here
+    }; //myApp.printNameToPage ends here - global
 
     //randomize array of answers
     myApp.randoNum = () => {
         return Math.floor(Math.random() * myApp.answers.length);
-    };  //myApp.randoNum method ends here
+    };  //myApp.randoNum method ends here - global
 
     //saving user's input from .form-submit
     myApp.userInputValue = function () {
@@ -61,17 +61,15 @@ const myApp = {}; //attempt to apply name spacing
             myApp.$questionInput = $('.form-submit input[type=text]').val();
             //myApp.$userQuestion var is defined at line 3, here, we are giving it a value
             myApp.$userQuestion = myApp.$questionInput
-
-        
         } else if ($('.form-submit input[type=text]').val() === '') {
               Swal.fire({
                 title: 'Error!',
                 text: 'Enter your question',
                 type: 'error',
                 confirmButtonText: 'OK YEP'
-            });
+            }); //sweetAlerts2 to handle blank question inputs
         };
-    } //myApp.userInput ends here
+    } //myApp.userInput ends here - global
 
     myApp.smoothScrollErrorHandling = function () {
         if ($('.form-submit input[type=text]').val() !== '') {
@@ -87,16 +85,7 @@ const myApp = {}; //attempt to apply name spacing
                 }, 1000);
             });
         };
-    } //myApp.smoothScrollErrorHandling ends here
-
-    // myApp.shakeAnimation = function () {
-    //     if ($('.form-submit input[type=text]').val() !== '') {
-    //         $('#submit').on('click', function () {
-    //             $("#shake").effect("shake");
-    //         });
-    //     };
-    // } //shakeAnimation ends here
-
+    } //myApp.smoothScrollErrorHandling ends here - global
         
     myApp.printToPage = function (item) {
         //variable to store value of myApp.randoNum()
@@ -105,15 +94,15 @@ const myApp = {}; //attempt to apply name spacing
         myApp.$question.html(`<h3 class="print-question"><span>${myApp.$userName}, </span> you asked: <span>${myApp.$userQuestion}</span>?</h3>`);
         myApp.$fortune.html(`<h3 class="answer">Magic 8 ball says: <span>${myApp.answers[random]}</span></h3>`);
         myApp.$image.html('<img id="shake" src="assets/noun-eight-ball.svg" alt="magic 8 ball"></img>')
-    }; //myApp.printToPage ends here
+    }; //myApp.printToPage ends here - global
 
     myApp.clearInput = function () {
         $('.intro').val('');
         $('.user-input').val('');
         $('.fortune').empty('')
-    }; //myApp.clearInput ends here
+    }; //myApp.clearInput ends here - global
 
-    //smooth scrolling functions (adpated from stack overflow) this also applies to smooth scrool in the myApp.smoothScrollErrorHandling variable.
+    //smooth scrolling functions (adpated from stack overflow) this reference was also used for smooth scroll in the myApp.smoothScrollErrorHandling variable.
     myApp.smoothScroll = function(){        
         $('#name-button').on('click', function () {
             $('html, body').animate({
@@ -127,7 +116,6 @@ const myApp = {}; //attempt to apply name spacing
             }, 1000);
         }); // smooth scroll from submit name -> question
 
-
         $('.form-reset input[type=submit]').on('submit', function () {
             $('html, body').animate({
                 scrollTop: $('#question').offset().top
@@ -138,32 +126,28 @@ const myApp = {}; //attempt to apply name spacing
     //form submit for name
     myApp.handleSubmitName = function () {
         $('.name-form').on('submit', function (e) {
-            e.preventDefault(); //prevent default refresh
-            myApp.userNameInput(); //calling global function
-            // myApp.shakeAnimation(); // calling shakeAnmation
-            myApp.printNameToPage(); //calling global function
+            e.preventDefault();
+            myApp.userNameInput();
+            myApp.printNameToPage();
         });
-    } //myApp.handleSubmitName ends here
+    } //myApp.handleSubmitName ends here - calling functions on .name-form submit
 
     //form submit for question
     myApp.handleSubmitQuestion = function () {          
         $('.form-submit').on('submit', function (e) {
-            e.preventDefault(); //prevent default refresh
-            myApp.randoNum(); // calling global function
-            myApp.userInputValue(); //calling global  function
-            myApp.smoothScrollErrorHandling(); // calling global function
-            myApp.printToPage(); // calling global function
-
-
-
+            e.preventDefault();
+            myApp.randoNum();
+            myApp.userInputValue();
+            myApp.smoothScrollErrorHandling();
+            myApp.printToPage();
         });
-    } //myApp.handleSubmitQuestion ends here
+    } //myApp.handleSubmitQuestion ends here - calling functions .form-submit on submit
 
     myApp.handleSubmitReset = function () {
         $('#re-submit').on('submit', function () {
             myApp.clearInput();
         }); 
-    } //handleSubmitReset ends here
+    } //handleSubmitReset ends here calling functions re-submit, on submit
 
     //initializing everything on page load
     myApp.init = function(){
@@ -173,6 +157,7 @@ const myApp = {}; //attempt to apply name spacing
         myApp.handleSubmitReset();
     };
 
+//doc ready
 $(function(){
     myApp.init()
-}) //doc ready
+})
